@@ -18,12 +18,18 @@
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 
     <!-- Todo: put here your site title -->
-    <title>Rauf Muritala | Data Professional</title>
+    <title>Rauf Muritala | Data Engineer</title>
     <!-- Todo: add some coding keywords below - e.g: (javascript, yourusername, etc) -->
-    <meta name="keywords" content=""raufmuritala, data analytics, data science, data engineering, python, sql, tableau" />
+    <meta name="keywords" content="raufmuritala, data engineer, cloud data pipelines, dbt, bigquery, aws, sql, python, data analytics" />
     <!-- Todo: improve your SEO by adding a small description of you -->
-    <meta name="description" content="Rauf Muritala - Data Analyst | Data Scientist | Data Engineer" />
-
+    <meta name="description" content="Rauf Muritala — Data Engineer specializing in cloud data pipelines and analytics engineering." />
+      <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Rauf Muritala | Data Engineer" />
+    <meta property="og:description" content="Data Engineer specializing in cloud data pipelines, analytics engineering, and modern ETL workflows." />
+    <meta property="og:image" content="https://raufmuritala.github.io/assets/profile.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raufmuritala.github.io/" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -46,9 +52,9 @@
     <section id="hero" class="jumbotron">
       <div class="container">
         <h1 class="hero-title load-hidden">
-          Hi, Welcome to my page, I'm <span class="text-color-main">Rauf Muritala</span> -
+          Welcome to my page, I'm <span class="text-color-main">Rauf Muritala</span> 
           <br />
-          a Data Engineer Building Scalable Data Pipelines and Analytics Systems.
+          a Data Engineer building scalable data pipelines and analytics systems.
         </h1>
         <p class="hero-cta load-hidden">
           <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about" style="margin-right: 1rem;">
@@ -70,7 +76,6 @@
           <div class="col-md-6 col-sm-12">
             <div class="about-wrapper__image load-hidden">
               <img
-                alt="Profile Image"
                 class="img-fluid rounded shadow-lg"
                 height="auto"
                 width="300px"
@@ -82,15 +87,21 @@
           <div class="col-md-6 col-sm-12">
             <div class="about-wrapper__info load-hidden">
               <p class="about-wrapper__info-text">
-                I'm Rauf Muritala, a Data Engineer skilled in building scalable data pipelines and transforming raw data 
-                into high-quality, analytics-ready structures.
+                A Data Engineer skilled in designing scalable data pipelines and 
+                transforming raw data into high-quality, analytics-ready structures.
               </p>
               <p class="about-wrapper__info-text">
-                With expertise in SQL, Python, dbt, and cloud technologies, I develop maintainable data models and high-impact reporting foundations.
+                Experienced in SQL, Python, dbt, and modern cloud technologies, with a focus on 
+                building maintainable data models and intuitive reporting foundations.
               </p>
               <p class="about-wrapper__info-text">
-                My focus is on creating data infrastructure that delivers faster, clearer, and more actionable business insights.
+                Dedicated to creating data infrastructure that delivers faster, clearer, and more actionable business insights.
               </p>
+              
+              <p class="about-wrapper__info-text">
+                <strong>Tech Stack:</strong> AWS (S3, Lambda, Athena, Glue), SQL, Python, dbt, BigQuery
+              </p>
+
               <span class="d-flex mt-3">
                 <a
                   rel="noreferrer"
@@ -123,11 +134,12 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <div class="project-wrapper__text load-hidden">
-            <h3 class="project-wrapper__text-title">AWS Serverless ETL Pipeline for JSON Data</h3>
+            <h3 class="project-wrapper__text-title">End-to-End Serverless ETL Pipeline using AWS (JSON → Parquet)</h3>
             <div>
               <p class="mb-4">
-                Built an AWS serverless ETL pipeline that automates JSON data processing into analytics-ready Parquet format. 
-                Implemented S3 triggers, Lambda transformations, and Glue cataloging to enable SQL querying with Athena for actionable business insights.
+                Built a serverless ETL pipeline that automates the conversion of raw JSON data into analytics-ready Parquet format. 
+                Designed the workflow using S3 triggers, Lambda transformations, and Glue cataloging to support schema management. 
+                Enabled efficient SQL querying through Athena, providing a scalable foundation for analytical insights.
               </p>
             </div>
             <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/raufmuritala/End-to-End-AWS-Data-Engineering-ETL-Pipeline/blob/main/README.md">
@@ -155,11 +167,12 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <div class="project-wrapper__text load-hidden">
-            <h3 class="project-wrapper__text-title">Experiments: Supplement Data Integration Pipeline</h3>
+            <h3 class="project-wrapper__text-title">Supplement Data Integration Pipeline using Python</h3>
             <div>
               <p class="mb-4">
-                Prepared and merged four months of health and supplement data for 1001-Experiments into a unified dataset. 
-                Standardized formats, resolved inconsistencies, and built a clean foundation for analyzing user behavior and supplement effectiveness.
+                Prepared and merged four months of health and supplement usage data into a single unified dataset. 
+                Standardized inputs, resolved structural inconsistencies, and engineered clean tables for exploratory analysis. 
+                Delivered a reliable dataset used to evaluate user behavior patterns and supplement effectiveness.
               </p>
 
               <!-- Technologies Section -->
@@ -190,12 +203,12 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <div class="project-wrapper__text load-hidden">
-            <h3 class="project-wrapper__text-title">AWS YouTube Analytics Pipeline</h3>
+            <h3 class="project-wrapper__text-title">YouTube Analytics Pipeline using AWS Serverless Architecture</h3>
             <div>
               <p class="mb-4">
-                Transformed raw YouTube data into business intelligence using AWS serverless technologies. 
-                Designed and deployed a complete data pipeline featuring automated data processing, SQL-based analysis with Athena, 
-                and real-time visualization dashboards
+                Developed a YouTube analytics pipeline using AWS serverless components to transform raw API data into meaningful insights. 
+                Automated ingestion, cleaning, and transformation processes, with analytics executed in Athena and visuals delivered through QuickSight dashboards. 
+                Provided stakeholders with real-time visibility into channel performance trends.
               </p>
 
               <!-- Technologies Section -->
@@ -226,12 +239,12 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <div class="project-wrapper__text load-hidden">
-            <h3 class="project-wrapper__text-title">End-to-End dbt + BigQuery Analytics Engineering Pipeline</h3>
+            <h3 class="project-wrapper__text-title">Analytics Engineering Pipeline using dbt + BigQuery</h3>
             <div>
               <p class="mb-4">
-                Designed a dbt-powered analytics pipeline on BigQuery, transforming raw customer data into clean, tested, 
-                documentation-backed tables ready for reporting and analysis.
-                All outputs are materialized into BigQuery for downstream analysis and business reporting.
+                Built an analytics engineering workflow using dbt Cloud and BigQuery to transform raw customer data into clean, tested, and documented models. 
+                Implemented staging, intermediate, and final layers to enforce structure and data quality. 
+                Produced analytics-ready tables that support reporting and downstream business analysis.
               </p>
 
               <!-- Technologies Section -->
@@ -267,12 +280,12 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <div class="project-wrapper__text load-hidden">
-            <h3 class="project-wrapper__text-title">Breast Cancer Diagnostic Analysis</h3>
+            <h3 class="project-wrapper__text-title">Breast Cancer Diagnostic Modeling using Machine Learning</h3>
             <div>
               <p class="mb-4">
-                A machine learning project that analyzes cellular data to predict tumor malignancy with 96.5% accuracy. 
-                This analysis identifies key biomarkers and builds predictive models to support early cancer detection and 
-                improve diagnostic decision-making in clinical settings.
+                Created a machine learning workflow to predict tumor malignancy using diagnostic cellular measurements. 
+                Processed and analyzed biomedical data, engineered features, and trained classification models achieving 96.5% accuracy. 
+                Delivered insights and predictive capabilities to support early cancer detection research.
               </p>
             </div>
             <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/raufmuritala/breast-cancer-analysis/blob/main/README.md">
@@ -307,11 +320,12 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <div class="project-wrapper__text load-hidden">
-            <h3 class="project-wrapper__text-title">Analyzing SAT Performance Across NYC Schools</h3>
+            <h3 class="project-wrapper__text-title">SAT Performance Analysis across NYC Public Schools</h3>
             <div>
               <p class="mb-4">
-                Analyzing NYC High School SAT Performance: Using SAT data from NYC high schools, I explored trends in Math, Reading, and Writing scores to identify 
-                top-performing schools and borough-level variations. This project offers data-driven insights to support educators, parents, and policymakers.
+                Analyzed NYC public high school SAT results to uncover trends in Math, Reading, and Writing scores across boroughs and institutions. 
+                Cleaned and processed education datasets to identify top-performing schools and performance disparities. 
+                Produced insights to support educators, policymakers, and community decision-makers.
               </p>
             </div>
             <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/raufmuritala/Project-Exploring-NYC-Public-School-Test-Result-Scores/blob/main/README.md">
@@ -340,11 +354,12 @@
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <div class="project-wrapper__text load-hidden">
-            <h3 class="project-wrapper__text-title">Bank Marketing Data Pipeline</h3>
+            <h3 class="project-wrapper__text-title">Bank Marketing Data Pipeline using Python</h3>
             <div>
               <p class="mb-4">
-                Cleaned and transformed UK bank marketing campaign data for PostgreSQL database integration. Standardized customer data, 
-                converted data types, and created normalized tables to support personal loan campaign analysis and future marketing initiatives.
+                Cleaned and transformed UK bank marketing campaign data to prepare it for PostgreSQL integration and downstream analysis. 
+                Standardized customer data, corrected data types, and created normalized relational tables. 
+                Enabled robust querying to support personal loan campaign evaluation and future marketing strategy work.
               </p>
             </div>
             <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--hero" href="https://github.com/raufmuritala/Cleaning-Bank-Marketing-Campaign-Data/blob/main/README.md">
@@ -384,6 +399,10 @@
       <p class="contact-wrapper__text">
         Let's work together to transform your data into actionable insights!
       </p>
+      <p class="contact-wrapper__text" style="margin-top: 1rem; color: #444;">
+        I’m available for freelance, contract, and full-time roles.
+      </p>
+      
       <div class="contact-buttons">
         <a
           rel="noreferrer"
@@ -398,11 +417,12 @@
           rel="noreferrer"
           target="_blank"
           class="cta-btn cta-btn--resume"
-          href="https://wa.me/2349065673167"
-          style="background-color: #25D366;"
+          href="https://www.linkedin.com/in/raufmuritala/"
+          style="background-color: #0A66C2; margin-right: 1rem;"
         >
-          WhatsApp/Call
+          Connect on LinkedIn
         </a>
+
       </div>
       <p class="contact-phone" style="margin-top: 1rem; color: #666; font-size: 1.1rem;">
         Phone: +234 906 567 3167
@@ -430,12 +450,34 @@
           </a>
         </div>
 
+        <div style="margin-top: 1rem; text-align: center;">
+          <a class="github-button"
+             href="https://github.com/raufmuritala"
+             data-size="large"
+             aria-label="Follow @raufmuritala on GitHub">
+             Follow @raufmuritala
+          </a>
+          <a class="github-button"
+             href="https://github.com/raufmuritala?tab=repositories"
+             data-icon="octicon-star"
+             data-size="large"
+             aria-label="Star my repositories on GitHub">
+             Star My Repos
+          </a>
+        </div>
+
+        
         <hr />
 
         <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
+
         <p class="footer__text">
-          © 2025 - Rauf Muritala | Data Professional Portfolio
+          © <span id="year"></span> - Rauf Muritala | Data Professional Portfolio
         </p>
+        
+        <script>
+          document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
 
        
       </div>
