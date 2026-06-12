@@ -10,7 +10,7 @@ export default function Certifications({ items }: { items: Certification[] }) {
       className="border-y border-line-soft bg-panel/30"
     >
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-        <SectionHeading eyebrow="silver.certifications" title="Certifications" />
+        <SectionHeading eyebrow="certifications" title="Certifications" />
         <div className="grid gap-5 md:grid-cols-3">
           {items.map((c, i) => (
             <Reveal key={c.title} delay={i * 0.07}>

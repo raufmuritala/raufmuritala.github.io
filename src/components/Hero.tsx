@@ -22,8 +22,9 @@ export default function Hero({ site }: { site: SiteContent }) {
             {...enter(0)}
             className="mb-5 font-mono text-sm text-muted"
           >
-            <span className="text-gold">$</span> whoami →{" "}
-            <span className="text-ink">{site.name}</span> · {site.role}
+            <span className="text-ink">{site.name}</span>
+            <span className="text-gold"> · </span>
+            {site.role}
           </motion.p>
 
           <motion.h1

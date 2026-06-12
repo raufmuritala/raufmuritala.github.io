@@ -14,9 +14,8 @@
     "twitter": "https://x.com/Raufmuritala"
   },
   "about": [
-    "I'm a Data Engineer focused on building data platforms that hold up in production — not just pipelines that run, but systems with clear contracts, tested models, observable failures, and costs you can explain.",
-    "My work spans the full lifecycle: ingesting raw transactional and event data, structuring it through layered architectures like Medallion (Bronze → Silver → Gold), modeling it for analytics with dbt, and delivering it to the business through warehouses and BI tools. I care as much about data quality, documentation, and maintainability as I do about throughput.",
-    "I currently work at Bujeti (YC W23), a corporate-cards and spend-management fintech, where I design and build the data platform and analytics layers that power product, finance, and operations decisions."
+    "I'm a Data Engineer focused on building data platforms that hold up in production — systems with clear contracts, tested models, observable failures, and costs you can explain.",
+    "My work spans the full lifecycle: ingesting raw transactional and event data, structuring it through layered architectures, modeling it for analytics, and delivering it to the business through warehouses and BI tools."
   ],
   "focusAreas": [
     "Data Engineering",
@@ -27,16 +26,49 @@
     "Business Intelligence"
   ],
   "techStack": [
-    { "name": "SQL", "group": "core" },
-    { "name": "Python", "group": "core" },
-    { "name": "dbt", "group": "modeling" },
-    { "name": "Databricks", "group": "platform" },
-    { "name": "Spark", "group": "platform" },
-    { "name": "Airflow", "group": "orchestration" },
-    { "name": "Azure", "group": "cloud" },
-    { "name": "AWS", "group": "cloud" },
-    { "name": "BigQuery", "group": "warehouse" },
-    { "name": "Power BI", "group": "bi" },
-    { "name": "Metabase", "group": "bi" }
+    {
+      "name": "SQL",
+      "group": "core"
+    },
+    {
+      "name": "Python",
+      "group": "core"
+    },
+    {
+      "name": "dbt",
+      "group": "modeling"
+    },
+    {
+      "name": "Databricks",
+      "group": "platform"
+    },
+    {
+      "name": "Spark",
+      "group": "platform"
+    },
+    {
+      "name": "Airflow",
+      "group": "orchestration"
+    },
+    {
+      "name": "Azure",
+      "group": "cloud"
+    },
+    {
+      "name": "AWS",
+      "group": "cloud"
+    },
+    {
+      "name": "BigQuery",
+      "group": "warehouse"
+    },
+    {
+      "name": "Power BI",
+      "group": "bi"
+    },
+    {
+      "name": "Metabase",
+      "group": "bi"
+    }
   ]
 }

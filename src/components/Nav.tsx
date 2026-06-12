@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const LINKS = [
   { href: "/#about", label: "About" },
@@ -39,7 +40,6 @@ export default function Nav() {
           <span className="text-gold">rauf</span>
           <span className="text-muted">@</span>
           <span>muritala</span>
-          <span className="text-muted">:~$</span>
         </Link>
 
         <ul className="hidden md:flex items-center gap-7">
@@ -63,11 +63,16 @@ export default function Nav() {
               Resume
             </a>
           </li>
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
 
+        <div className="md:hidden flex items-center gap-2">
+        <ThemeToggle />
         <button
           type="button"
-          className="md:hidden p-2 text-muted hover:text-ink"
+          className="p-2 text-muted hover:text-ink"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
@@ -80,6 +85,7 @@ export default function Nav() {
             )}
           </svg>
         </button>
+        </div>
       </nav>
 
       {open ? (

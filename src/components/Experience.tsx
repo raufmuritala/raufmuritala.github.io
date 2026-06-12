@@ -12,7 +12,7 @@ export default function Experience({
 }) {
   return (
     <section id="experience" className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-      <SectionHeading eyebrow="silver.experience" title="Experience" />
+      <SectionHeading eyebrow="experience" title="Experience" />
 
       <ol className="relative ml-2 border-l border-line pl-8 md:ml-4 md:pl-12">
         {items.map((job, i) => (
@@ -78,7 +78,7 @@ export default function Experience({
       {education.length > 0 ? (
         <Reveal className="mt-16">
           <p className="mb-4 font-mono text-xs tracking-widest text-gold/90">
-            bronze.education
+            education
           </p>
           {education.map((e) => (
             <div

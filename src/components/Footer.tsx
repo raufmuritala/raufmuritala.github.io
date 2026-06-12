@@ -5,10 +5,7 @@ export default function Footer({ site }: { site: SiteContent }) {
     <footer className="border-t border-line-soft">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 md:flex-row md:px-8">
         <p className="font-mono text-xs text-faint">
-          © {new Date().getFullYear()} {site.name} · built from{" "}
-          <span className="text-bronze">bronze</span> →{" "}
-          <span className="text-silver">silver</span> →{" "}
-          <span className="text-gold">gold</span>
+          © {new Date().getFullYear()} {site.name} · {site.role}
         </p>
         <nav className="flex gap-5" aria-label="Social links">
           <a href={site.social.github} target="_blank" rel="noreferrer" className="text-xs text-muted hover:text-gold transition-colors">

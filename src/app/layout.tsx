@@ -43,6 +43,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const themeInit = `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||(!t&&window.matchMedia("(prefers-color-scheme: light)").matches)){document.documentElement.classList.add("light")}}catch(e){}})()`;
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -62,7 +64,10 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="scroll-pt-24">
+    <html lang="en" className="scroll-pt-24" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
       <body>
         <script
           type="application/ld+json"

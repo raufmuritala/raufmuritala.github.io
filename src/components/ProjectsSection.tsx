@@ -10,7 +10,7 @@ export default function ProjectsSection({ projects }: { projects: Project[] }) {
     >
       <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <SectionHeading
-          eyebrow="gold.featured_projects"
+          eyebrow="featured_projects"
           title="Featured projects"
           intro="Production-style data platforms and pipelines, written up as case studies — problem, architecture, decisions, and measured impact."
         />

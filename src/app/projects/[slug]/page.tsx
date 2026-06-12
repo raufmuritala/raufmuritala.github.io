@@ -181,16 +181,16 @@ export default async function ProjectPage({ params }: Props) {
         ) : null}
 
         <div className="mt-16">
-          <CaseSection layer="bronze.problem" title="The problem">
+          <CaseSection layer="problem" title="The problem">
             <p className="leading-relaxed text-muted">{project.problem}</p>
           </CaseSection>
 
-          <CaseSection layer="silver.solution" title="The solution">
+          <CaseSection layer="solution" title="The solution">
             <p className="leading-relaxed text-muted">{project.solution}</p>
           </CaseSection>
 
           {project.architecture ? (
-            <CaseSection layer="silver.architecture" title="Architecture">
+            <CaseSection layer="architecture" title="Architecture">
               <p className="leading-relaxed text-muted">
                 {project.architecture.description}
               </p>
@@ -206,30 +206,30 @@ export default async function ProjectPage({ params }: Props) {
             </CaseSection>
           ) : null}
 
-          <CaseSection layer="gold.impact" title="Business impact">
+          <CaseSection layer="impact" title="Business impact">
             <p className="leading-relaxed text-muted">{project.impact}</p>
           </CaseSection>
 
           {project.challenges && project.challenges.length > 0 ? (
-            <CaseSection layer="log.challenges" title="Challenges">
+            <CaseSection layer="challenges" title="Challenges">
               <BulletList items={project.challenges} />
             </CaseSection>
           ) : null}
 
           {project.designDecisions && project.designDecisions.length > 0 ? (
-            <CaseSection layer="log.design_decisions" title="Design decisions">
+            <CaseSection layer="design_decisions" title="Design decisions">
               <BulletList items={project.designDecisions} />
             </CaseSection>
           ) : null}
 
           {project.lessonsLearned && project.lessonsLearned.length > 0 ? (
-            <CaseSection layer="log.lessons_learned" title="Lessons learned">
+            <CaseSection layer="lessons_learned" title="Lessons learned">
               <BulletList items={project.lessonsLearned} />
             </CaseSection>
           ) : null}
 
           {project.gallery && project.gallery.length > 0 ? (
-            <CaseSection layer="assets.gallery" title="Gallery">
+            <CaseSection layer="gallery" title="Gallery">
               <div className="grid gap-4 sm:grid-cols-2">
                 {project.gallery.map((src) => (
                   <Image
@@ -247,7 +247,7 @@ export default async function ProjectPage({ params }: Props) {
 
           <Reveal>
             <p className="mb-3 font-mono text-xs tracking-widest text-gold/90">
-              meta.tech_stack
+              tech_stack
             </p>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((t) => (

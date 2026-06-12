@@ -103,3 +103,28 @@ body {
     animation: none;
   }
 }
+
+/* ---------- Light theme ---------- */
+:root {
+  color-scheme: dark;
+}
+html.light {
+  color-scheme: light;
+  --color-bg: #faf9f6;
+  --color-panel: #ffffff;
+  --color-panel-2: #f3f1ec;
+  --color-line: #ddd9cf;
+  --color-line-soft: #e7e4dc;
+  --color-ink: #1c2333;
+  --color-muted: #525e76;
+  --color-faint: #8a93a8;
+  --color-bronze: #96603a;
+  --color-silver: #5d6e88;
+  --color-gold: #a87421;
+  --color-gold-soft: rgba(168, 116, 33, 0.12);
+}
+html.light .grid-texture {
+  background-image:
+    linear-gradient(to right, rgba(82, 94, 118, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(82, 94, 118, 0.08) 1px, transparent 1px);
+}

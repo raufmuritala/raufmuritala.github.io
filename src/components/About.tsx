@@ -6,7 +6,7 @@ import type { SiteContent } from "@/lib/types";
 export default function About({ site }: { site: SiteContent }) {
   return (
     <section id="about" className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
-      <SectionHeading eyebrow="silver.about_me" title="About" />
+      <SectionHeading eyebrow="about_me" title="About" />
 
       <div className="grid gap-12 md:grid-cols-[0.42fr_0.58fr] md:gap-16">
         <Reveal>
@@ -47,7 +47,7 @@ export default function About({ site }: { site: SiteContent }) {
 
           <Reveal delay={0.2}>
             <p className="mb-4 mt-10 font-mono text-xs tracking-widest text-gold/90">
-              gold.tech_stack
+              tech_stack
             </p>
             <div className="flex flex-wrap gap-2">
               {site.techStack.map((t) => (

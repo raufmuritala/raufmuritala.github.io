@@ -9,7 +9,7 @@ export default function Contact({ site }: { site: SiteContent }) {
           <div className="grid-texture absolute inset-0" aria-hidden="true" />
           <div className="relative">
             <p className="font-mono text-xs tracking-widest text-gold/90">
-              gold.contact
+              contact
             </p>
             <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
               Let&apos;s build your next data platform.
