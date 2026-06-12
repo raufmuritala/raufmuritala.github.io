@@ -1,0 +1,40 @@
+{
+  "title": "Analytics Engineering with dbt + BigQuery",
+  "category": "Analytics Engineering",
+  "summary": "A layered dbt workflow on BigQuery that turns raw customer data into tested, documented, analytics-ready models — staging, intermediate, and marts with data quality enforced in CI.",
+  "problem": "Raw customer data in the warehouse was queried ad hoc: every analyst rewrote the same cleaning logic, definitions drifted between reports, and nothing was tested or documented. The result was slow analysis and metrics nobody fully trusted.",
+  "solution": "I implemented an analytics engineering workflow with dbt Cloud on BigQuery. Source data is declared and freshness-checked, staging models standardize naming and types one-to-one with sources, intermediate models encode reusable business logic, and final mart models serve reporting. Schema and data tests (unique, not-null, relationships, accepted values) run on every build, and dbt docs generate a browsable lineage graph and column-level documentation.",
+  "impact": "Analysts now build on tested, documented models instead of raw tables — shared definitions ended metric drift, failing tests catch bad data before it reaches reports, and the lineage graph makes the entire transformation flow self-explaining for new contributors.",
+  "architecture": {
+    "description": "BigQuery holds raw source datasets. dbt structures transformation in three layers: staging (cleaning and standardization), intermediate (business logic), and marts (analytics-ready tables for reporting). dbt tests enforce quality contracts at each layer, and generated documentation exposes lineage from source to mart.",
+    "diagram": "/images/projects/dbt-bigquery-analytics-engineering/architecture.png"
+  },
+  "metrics": [
+    { "value": "3", "label": "model layers: staging → intermediate → marts" },
+    { "value": "Tested", "label": "quality contracts on every model" },
+    { "value": "Documented", "label": "full lineage via dbt docs" }
+  ],
+  "challenges": [
+    "Drawing the line between intermediate logic and mart logic so models stay reusable without becoming a tangle of dependencies.",
+    "Choosing materializations: views for cheap staging layers, tables for marts that reports hit repeatedly.",
+    "Making tests meaningful — testing what can actually break (keys, relationships, accepted values) rather than testing for coverage's sake."
+  ],
+  "designDecisions": [
+    "Strict staging convention (one staging model per source table, renaming and casting only) — it keeps the messy edge of the warehouse contained in one layer.",
+    "Tests as contracts between layers: a mart can trust its inputs because the layer below enforces them.",
+    "Documentation generated from code, not maintained beside it — docs that drift from reality are worse than none."
+  ],
+  "lessonsLearned": [
+    "Analytics engineering is mostly software engineering: version control, tests, and review do more for data quality than any tool feature.",
+    "Naming conventions are leverage — a predictable model structure means anyone can find and extend the right model without asking."
+  ],
+  "techStack": ["dbt", "BigQuery", "SQL", "Git"],
+  "githubUrl": "https://github.com/raufmuritala/dbt-basics",
+  "liveUrl": null,
+  "featured": false,
+  "published": true,
+  "order": 4,
+  "date": "2024",
+  "coverImage": "/images/projects/dbt-bigquery-analytics-engineering/cover.png",
+  "gallery": []
+}

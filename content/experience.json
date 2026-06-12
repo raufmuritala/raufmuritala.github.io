@@ -1,0 +1,53 @@
+{
+  "_note": "Edit this file to update the Experience timeline. Newest first. 'end': null means Present.",
+  "items": [
+    {
+      "company": "Bujeti (YC W23)",
+      "companyUrl": "https://bujeti.com",
+      "role": "Data Engineer",
+      "type": "Full-time · Remote",
+      "location": "Lagos, Nigeria",
+      "start": "Dec 2025",
+      "end": null,
+      "summary": "Designing and building scalable data platforms and analytics layers to deliver reliable, production-ready data across the company.",
+      "highlights": [
+        "Own the company data platform end to end — ingestion, modeling, orchestration, and serving layers.",
+        "Build analytics-ready data models that power product, finance, and operations reporting.",
+        "Establish data quality checks, documentation, and conventions for long-term maintainability."
+      ],
+      "skills": ["SQL", "Data Modeling", "Python", "dbt", "Cloud Data Platforms"]
+    },
+    {
+      "company": "Bujeti (YC W23)",
+      "companyUrl": "https://bujeti.com",
+      "role": "Data Analyst",
+      "type": "Full-time · Remote",
+      "location": "Lagos, Nigeria",
+      "start": "Dec 2024",
+      "end": "Dec 2025",
+      "summary": "Delivered analytics solutions that enabled data-driven decision-making across product, finance, and operations.",
+      "highlights": [
+        "Built dashboards and reporting foundations used across product, finance, and operations teams.",
+        "Translated business questions into clean, reusable SQL models and metrics.",
+        "Partnered with engineering to improve data reliability upstream of analytics."
+      ],
+      "skills": ["Python", "SQL", "Analytics", "BI"]
+    },
+    {
+      "company": "Spurt!",
+      "companyUrl": null,
+      "role": "Data Analyst (Internship)",
+      "type": "Internship · Remote",
+      "location": "Newark, Delaware, United States",
+      "start": "Jun 2023",
+      "end": "May 2024",
+      "summary": "Supported business and operational decision-making with datasets, analytical models, and automated data workflows.",
+      "highlights": [
+        "Developed datasets and analytical models to support business and operational decision-making.",
+        "Analyzed trends and performance metrics to identify opportunities for process and strategy improvements.",
+        "Contributed to database development and automated data collection workflows."
+      ],
+      "skills": ["Data Analysis", "Microsoft Power BI"]
+    }
+  ]
+}

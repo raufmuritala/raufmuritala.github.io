@@ -1,0 +1,40 @@
+{
+  "title": "AWS Serverless ETL Pipeline (JSON → Parquet)",
+  "category": "Data Pipeline",
+  "summary": "A fully serverless, event-driven ETL pipeline on AWS that converts raw JSON into analytics-ready Parquet the moment it lands — no servers, no schedules, no idle cost.",
+  "problem": "Raw JSON files are convenient to produce but expensive to analyze: schemas drift, files are row-oriented, and scanning them directly is slow and costly. The team needed analytics-ready data without standing up or maintaining any always-on infrastructure.",
+  "solution": "I built an event-driven pipeline where S3 object-created events trigger a Lambda function that validates, flattens, and converts incoming JSON to columnar Parquet. AWS Glue crawlers maintain the table schemas in the Data Catalog automatically, and Amazon Athena provides serverless SQL over the curated layer. The entire pipeline scales to zero when idle and scales out automatically under load.",
+  "impact": "New data becomes queryable within seconds of arrival, Parquet conversion cut Athena scan volume (and therefore query cost) dramatically compared with raw JSON, and the pipeline runs with zero servers to patch or capacity to plan.",
+  "architecture": {
+    "description": "Producers drop JSON into a raw S3 bucket. An S3 event notification invokes Lambda, which transforms the payload and writes partitioned Parquet to a curated bucket. A Glue crawler keeps the Data Catalog schema in sync, and Athena queries the curated tables directly. IAM scopes each component to least privilege.",
+    "diagram": "/images/projects/aws-serverless-etl/architecture.png"
+  },
+  "metrics": [
+    { "value": "Seconds", "label": "from file landing to queryable" },
+    { "value": "0", "label": "servers to manage" },
+    { "value": "Columnar", "label": "Parquet cuts scan cost vs raw JSON" }
+  ],
+  "challenges": [
+    "Schema drift in incoming JSON — handled with a tolerant flattening step and Glue crawlers so new fields appear in the catalog without breaking existing queries.",
+    "Lambda limits — large payloads required streaming reads and memory tuning to stay within function constraints.",
+    "Idempotency — S3 events can be delivered more than once, so writes are deterministic and safe to replay."
+  ],
+  "designDecisions": [
+    "Event-driven over scheduled batch — data is ready when it arrives, and there is no idle compute between runs.",
+    "Parquet as the analytical format — columnar layout and compression directly reduce Athena scan bytes, which is the unit you pay for.",
+    "Glue Data Catalog as the single source of schema truth shared by every downstream consumer."
+  ],
+  "lessonsLearned": [
+    "In serverless analytics, the file format is the performance tuning knob — converting to Parquet did more for cost than any query optimization.",
+    "Designing for at-least-once event delivery from the start is far cheaper than deduplicating bad data later."
+  ],
+  "techStack": ["AWS S3", "AWS Lambda", "AWS Glue", "Amazon Athena", "Python"],
+  "githubUrl": "https://github.com/raufmuritala/End-to-End-AWS-Data-Engineering-ETL-Pipeline",
+  "liveUrl": null,
+  "featured": true,
+  "published": true,
+  "order": 2,
+  "date": "2024",
+  "coverImage": "/images/projects/aws-serverless-etl/cover.png",
+  "gallery": []
+}

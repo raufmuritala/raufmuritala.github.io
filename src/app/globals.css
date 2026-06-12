@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/*
+  Design tokens — "warehouse midnight" with a Medallion accent system.
+  Bronze → Silver → Gold mirrors the Medallion Architecture: the same
+  vocabulary the projects on this site are built with.
+*/
+@theme {
+  --color-bg: #0a0d14;
+  --color-panel: #10141e;
+  --color-panel-2: #151b29;
+  --color-line: #202938;
+  --color-line-soft: #182030;
+  --color-ink: #e8ecf4;
+  --color-muted: #94a0b8;
+  --color-faint: #5d6880;
+  --color-bronze: #c2824f;
+  --color-silver: #a9b6c9;
+  --color-gold: #e4b05c;
+  --color-gold-soft: rgba(228, 176, 92, 0.12);
+
+  --font-display: "Space Grotesk Variable", "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter Variable", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Subtle grid texture behind the page — schema paper, very low contrast */
+.grid-texture {
+  background-image:
+    linear-gradient(to right, rgba(148, 160, 184, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 160, 184, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 75%);
+}
+
+/* Animated data pulses for the hero pipeline DAG */
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+.pipe-flow {
+  stroke-dasharray: 4 26;
+  animation: flow-dash 3.2s linear infinite;
+}
+.pipe-flow-slow {
+  stroke-dasharray: 3 33;
+  animation: flow-dash 4.6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pipe-flow,
+  .pipe-flow-slow {
+    animation: none;
+    stroke-dasharray: none;
+    opacity: 0.5;
+  }
+}
+
+@keyframes node-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.node-glow {
+  animation: node-glow 3.2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .node-glow {
+    animation: none;
+  }
+}

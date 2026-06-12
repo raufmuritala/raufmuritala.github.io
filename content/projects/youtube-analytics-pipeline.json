@@ -1,0 +1,40 @@
+{
+  "title": "YouTube Analytics Pipeline",
+  "category": "Analytics Pipeline",
+  "summary": "A serverless AWS pipeline that turns raw YouTube API data into stakeholder-ready dashboards — automated ingestion, cleaning, transformation, and visualization end to end.",
+  "problem": "Channel performance data from the YouTube API arrives as nested, semi-structured JSON across regions and categories. Stakeholders needed trend visibility — what content performs, where, and why — but had no automated path from raw API responses to a dashboard they could trust.",
+  "solution": "I built a layered serverless pipeline on AWS: raw API data lands in S3, Lambda functions clean and normalize the nested JSON, and AWS Glue jobs transform and join it into curated, partitioned datasets. Amazon Athena runs the analytical queries, and Amazon QuickSight serves interactive dashboards on top — giving stakeholders self-serve visibility into channel performance trends.",
+  "impact": "Replaced manual data pulls with an automated flow from API to dashboard, giving stakeholders continuously refreshed visibility into engagement and category performance trends, built entirely on pay-per-use serverless components.",
+  "architecture": {
+    "description": "Raw YouTube data lands in an S3 landing zone. Lambda performs cleaning and JSON normalization into a cleansed zone; Glue ETL jobs join statistics with category reference data into an analytics zone, partitioned for efficient scans. The Glue Data Catalog tracks schemas across all zones, Athena queries the analytics layer, and QuickSight dashboards visualize trends for stakeholders.",
+    "diagram": "/images/projects/youtube-analytics-pipeline/architecture.png"
+  },
+  "metrics": [
+    { "value": "3", "label": "data zones: landing → cleansed → analytics" },
+    { "value": "100%", "label": "serverless, pay-per-use components" },
+    { "value": "Self-serve", "label": "stakeholder dashboards in QuickSight" }
+  ],
+  "challenges": [
+    "Deeply nested API JSON with region-specific category mappings required careful normalization before joins were reliable.",
+    "Partitioning strategy mattered: partitioning the analytics zone by region kept Athena scans small and dashboards responsive.",
+    "Keeping Glue job runs incremental rather than full-refresh to control cost as history grew."
+  ],
+  "designDecisions": [
+    "A multi-zone S3 layout (landing / cleansed / analytics) so every transformation stage is inspectable and replayable.",
+    "Glue for the heavier join-and-transform work, Lambda for lightweight cleaning — each tool sized to its job.",
+    "QuickSight over custom dashboards — stakeholders get interactivity without anyone maintaining a web app."
+  ],
+  "lessonsLearned": [
+    "Semi-structured data is only 'semi' until you enforce structure — normalizing early made every downstream step simpler.",
+    "Dashboards are the product: pipeline quality is invisible until the numbers stakeholders see are right and fast."
+  ],
+  "techStack": ["AWS S3", "AWS Lambda", "AWS Glue", "Amazon Athena", "Amazon QuickSight", "Python"],
+  "githubUrl": "https://github.com/raufmuritala/dataengineering-youtube-analysis-project",
+  "liveUrl": "https://github.com/raufmuritala/dataengineering-youtube-analysis-project/blob/main/Youtube%20Analysis_QuickSight.pdf",
+  "featured": true,
+  "published": true,
+  "order": 3,
+  "date": "2024",
+  "coverImage": "/images/projects/youtube-analytics-pipeline/cover.png",
+  "gallery": []
+}

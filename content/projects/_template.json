@@ -1,0 +1,29 @@
+{
+  "_howto": "COPY this file to a new name like my-new-project.json (the filename becomes the URL slug: /projects/my-new-project/). Fill in the fields, add images to public/images/projects/my-new-project/, set published to true, commit, and push. The site rebuilds and deploys automatically. Fields marked optional can be null or [].",
+  "title": "Project Title",
+  "category": "Data Platform",
+  "summary": "One or two sentences shown on the project card and at the top of the case study.",
+  "problem": "What was broken, slow, manual, or untrustworthy before this project existed?",
+  "solution": "What you built and how it works, at a level a hiring manager can follow.",
+  "impact": "The business outcome: numbers, time saved, cost reduced, decisions enabled.",
+  "architecture": {
+    "description": "How data flows through the system, component by component.",
+    "diagram": "/images/projects/my-new-project/architecture.png"
+  },
+  "metrics": [
+    { "value": "1.2M", "label": "rows processed daily" },
+    { "value": "99.9%", "label": "pipeline success rate" }
+  ],
+  "challenges": ["A hard problem you hit and how you handled it. (optional — remove section by using [])"],
+  "designDecisions": ["A choice you made, the alternative you rejected, and why. (optional)"],
+  "lessonsLearned": ["Something you'd carry into the next project. (optional)"],
+  "techStack": ["Tool One", "Tool Two"],
+  "githubUrl": "https://github.com/raufmuritala/my-new-project",
+  "liveUrl": null,
+  "featured": false,
+  "published": false,
+  "order": 99,
+  "date": "2026",
+  "coverImage": "/images/projects/my-new-project/cover.png",
+  "gallery": ["/images/projects/my-new-project/screenshot-1.png"]
+}

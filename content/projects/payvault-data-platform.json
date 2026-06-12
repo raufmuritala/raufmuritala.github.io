@@ -1,0 +1,42 @@
+{
+  "title": "PayVault — Production-Grade Data Platform",
+  "category": "Data Platform",
+  "summary": "An end-to-end fintech data platform on Azure and Databricks that replaced manual Excel reporting and fragmented fraud monitoring with a governed Medallion lakehouse.",
+  "problem": "PayVault's reporting lived in spreadsheets. Transactional, fraud, and FX data arrived from separate systems in inconsistent formats, so finance teams reconciled numbers by hand, fraud signals sat in silos with no unified view of risk, and every metric required manual rework. There was no single, trusted source of truth — and no way to scale reporting as transaction volume grew.",
+  "solution": "I designed and built a production-grade lakehouse on Azure. Raw transactional, fraud, and FX feeds land in Azure Data Lake Gen2 via Event Hubs and Data Factory, then move through a Medallion Architecture in Databricks: Bronze preserves raw immutable history, Silver applies cleaning, deduplication, and conformance with PySpark and Delta Lake, and Gold serves business-ready models — standardized multi-currency GMV, centralized fraud signals, and finance-grade reporting tables queryable through Databricks SQL.",
+  "impact": "The platform processed and modelled 88,121 transactions and standardized $55.8M USD of GMV across currencies, centralized fraud signals into a single risk view, and replaced hours of manual Excel work with an automated pipeline that completes in 1 minute 7 seconds at roughly $0.60 per month in compute cost.",
+  "architecture": {
+    "description": "Event Hubs and Data Factory ingest transactional, fraud, and FX data into ADLS Gen2. Databricks jobs promote data through Bronze (raw Delta tables, schema-on-read), Silver (validated, deduplicated, conformed entities), and Gold (dimensional models and aggregate marts). Databricks SQL exposes the Gold layer to analysts and dashboards. Delta Lake provides ACID guarantees, time travel, and schema enforcement at every layer.",
+    "diagram": "/images/projects/payvault-data-platform/architecture.png"
+  },
+  "metrics": [
+    { "value": "88,121", "label": "transactions processed & modelled" },
+    { "value": "$55.8M", "label": "GMV standardized across currencies" },
+    { "value": "1m 7s", "label": "end-to-end pipeline runtime" },
+    { "value": "~$0.60", "label": "monthly compute cost" }
+  ],
+  "challenges": [
+    "Multi-currency normalization: FX rates arrived on a different cadence than transactions, so GMV standardization required point-in-time joins that stay correct under late-arriving data.",
+    "Fraud data fragmentation: signals came from multiple systems with conflicting identifiers, requiring an entity-resolution layer before risk metrics could be trusted.",
+    "Cost discipline: keeping a Databricks-based platform under a dollar a month meant right-sizing clusters, job-scoped compute, and aggressively pruning with Delta file compaction and partitioning."
+  ],
+  "designDecisions": [
+    "Medallion Architecture over a single transform step — preserving raw Bronze history makes every downstream model reproducible and auditable, which matters in fintech.",
+    "Delta Lake as the table format — ACID transactions and schema enforcement prevent silent data corruption that plagued the spreadsheet workflow.",
+    "Databricks SQL as the serving layer instead of exporting to a separate warehouse — one platform, one security model, no duplicate storage."
+  ],
+  "lessonsLearned": [
+    "In fintech, auditability is a feature: the Bronze layer paid for itself the first time a finance number was questioned and could be traced back to source records.",
+    "Pipeline cost is a design input, not an afterthought — measuring cost per run from day one shaped cluster and partitioning choices.",
+    "A 'small' platform still deserves production discipline: idempotent jobs, data quality checks, and clear layer contracts made iteration faster, not slower."
+  ],
+  "techStack": ["Azure Data Lake Gen2", "Databricks", "PySpark", "Delta Lake", "Event Hubs", "Azure Data Factory", "Databricks SQL"],
+  "githubUrl": "https://github.com/raufmuritala/payvault-data-platform",
+  "liveUrl": null,
+  "featured": true,
+  "published": true,
+  "order": 1,
+  "date": "2025",
+  "coverImage": "/images/projects/payvault-data-platform/cover.png",
+  "gallery": []
+}
