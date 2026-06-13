@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import Snapshot from "@/components/Snapshot";
 import About from "@/components/About";
 import ProjectsSection from "@/components/ProjectsSection";
 import Experience from "@/components/Experience";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <Nav />
       <main>
         <Hero site={site} />
+        <Snapshot site={site} />
         <About site={site} />
         <ProjectsSection projects={projects} />
         <Experience items={experience} education={education} />

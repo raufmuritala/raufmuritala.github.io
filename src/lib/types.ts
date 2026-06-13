@@ -74,6 +74,16 @@ export interface TechStackItem {
   group: string;
 }
 
+export interface SnapshotMetric {
+  value: string;
+  label: string;
+}
+
+export interface EngineeringSnapshot {
+  metrics: SnapshotMetric[];
+  caption?: string;
+}
+
 export interface SiteContent {
   name: string;
   role: string;
@@ -92,4 +102,5 @@ export interface SiteContent {
   about: string[];
   focusAreas: string[];
   techStack: TechStackItem[];
+  snapshot?: EngineeringSnapshot;
 }

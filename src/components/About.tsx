@@ -8,27 +8,23 @@ export default function About({ site }: { site: SiteContent }) {
     <section id="about" className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
       <SectionHeading eyebrow="about_me" title="About" />
 
-      <div className="grid gap-12 md:grid-cols-[0.42fr_0.58fr] md:gap-16">
+      <div className="grid gap-10 md:grid-cols-[0.35fr_0.65fr] md:gap-16">
         <Reveal>
-          <div className="relative">
-            <div
-              className="absolute -inset-3 rounded-2xl border border-gold/25"
-              aria-hidden="true"
-            />
-            <Image
-              src={site.profileImage}
-              alt={`Portrait of ${site.name}`}
-              width={526}
-              height={540}
-              className="relative w-full rounded-xl border border-line object-cover grayscale-[15%]"
-              priority={false}
-            />
-          </div>
-          <div className="mt-8 grid grid-cols-2 gap-2">
+          {/* Portrait is intentionally secondary: small, desaturated, with a
+              quiet design-system border so the written content leads. */}
+          <Image
+            src={site.profileImage}
+            alt={`Portrait of ${site.name}`}
+            width={526}
+            height={540}
+            className="w-full max-w-[140px] rounded-xl border border-line bg-transparent object-cover [filter:grayscale(0.35)_contrast(0.87)_saturate(0.9)] md:max-w-[240px]"
+            priority={false}
+          />
+          <div className="mt-6 flex flex-col gap-2">
             {site.focusAreas.map((area) => (
               <p
                 key={area}
-                className="rounded-md border border-line-soft bg-panel px-3 py-2 text-center font-mono text-[11px] text-muted"
+                className="rounded-md border border-line-soft bg-panel px-3 py-2 font-mono text-[11px] text-muted"
               >
                 {area}
               </p>

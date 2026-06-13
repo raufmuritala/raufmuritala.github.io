@@ -13,6 +13,15 @@
     "linkedin": "https://www.linkedin.com/in/raufmuritala/",
     "twitter": "https://x.com/Raufmuritala"
   },
+  "snapshot": {
+    "caption": "Azure · AWS · GCP · Databricks · dbt · Spark · Airflow",
+    "metrics": [
+      { "value": "3", "label": "Data Platforms Built" },
+      { "value": "3", "label": "Cloud Providers" },
+      { "value": "12+", "label": "Core Technologies" },
+      { "value": "4", "label": "Production Pipelines" }
+    ]
+  },
   "about": [
     "I'm a Data Engineer focused on building data platforms that hold up in production — systems with clear contracts, tested models, observable failures, and costs you can explain.",
     "My work spans the full lifecycle: ingesting raw transactional and event data, structuring it through layered architectures, modeling it for analytics, and delivering it to the business through warehouses and BI tools."
