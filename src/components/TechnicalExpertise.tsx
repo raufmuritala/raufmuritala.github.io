@@ -19,7 +19,6 @@ export default function TechnicalExpertise({
       <SectionHeading
         eyebrow="technical_expertise"
         title="Technical expertise"
-        intro="The tools I reach for, grouped by what they do — not rated by a percentage nobody believes."
       />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {groups.map((g, i) => (

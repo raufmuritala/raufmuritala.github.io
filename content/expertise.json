@@ -17,7 +17,7 @@
     },
     {
       "group": "Analytics & BI",
-      "note": "last mile",
+      "note": "consumption layer",
       "items": ["Power BI", "Metabase", "QuickSight", "SQL"]
     },
     {

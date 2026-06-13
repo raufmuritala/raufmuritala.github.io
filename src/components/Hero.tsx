@@ -177,10 +177,6 @@ export default function Hero({ site }: { site: SiteContent }) {
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
               Open to opportunities
             </span>
-            <span className="absolute -bottom-3 left-4 inline-flex items-center gap-2 rounded-md border border-line bg-bg/90 px-3 py-1.5 font-mono text-[11px] text-muted shadow-lg backdrop-blur">
-              <span className="text-gold">{">"}_</span>
-              dbt build --select gold
-            </span>
           </motion.div>
         </div>
 
