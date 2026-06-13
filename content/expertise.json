@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "group": "Data Engineering",
+      "note": "build & transform",
+      "items": ["Spark", "Databricks", "Delta Lake", "dbt", "Airflow"]
+    },
+    {
+      "group": "Cloud Platforms",
+      "note": "where it runs",
+      "items": ["Azure", "AWS", "GCP"]
+    },
+    {
+      "group": "Data Warehousing",
+      "note": "serving layer",
+      "items": ["BigQuery", "Databricks SQL", "Amazon Athena"]
+    },
+    {
+      "group": "Analytics & BI",
+      "note": "last mile",
+      "items": ["Power BI", "Metabase", "QuickSight", "SQL"]
+    },
+    {
+      "group": "Languages",
+      "note": "day to day",
+      "items": ["Python", "SQL"]
+    }
+  ]
+}

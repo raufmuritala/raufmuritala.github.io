@@ -1,6 +1,12 @@
 {
   "name": "Rauf Muritala",
   "role": "Data Engineer",
+  "roles": [
+    "Data Engineer",
+    "Analytics Engineer",
+    "Data Platform Engineer",
+    "BI Developer"
+  ],
   "headline": "Building scalable data platforms and analytics systems.",
   "tagline": "I design production-grade pipelines, warehouses, and analytics layers on Azure, AWS, and GCP — turning raw, fragmented data into reliable foundations for decision-making.",
   "location": "Lagos, Nigeria · Remote",

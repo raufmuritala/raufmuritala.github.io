@@ -69,6 +69,22 @@ export interface Certification {
   skills?: string[];
 }
 
+export interface BlogPost {
+  title: string;
+  subtitle?: string;
+  url: string;
+  /** ISO date, e.g. 2026-02-03 — used for sorting and display. */
+  date: string;
+  publication?: string;
+}
+
+export interface ExpertiseGroup {
+  group: string;
+  /** Short qualifier shown under the group title, e.g. "build & transform". */
+  note?: string;
+  items: string[];
+}
+
 export interface TechStackItem {
   name: string;
   group: string;
@@ -99,6 +115,8 @@ export interface SiteContent {
     linkedin: string;
     twitter?: string;
   };
+  /** Rotating role titles cycled in the hero (typewriter). Falls back to role. */
+  roles?: string[];
   about: string[];
   focusAreas: string[];
   techStack: TechStackItem[];

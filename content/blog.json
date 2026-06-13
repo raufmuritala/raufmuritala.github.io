@@ -1,0 +1,36 @@
+{
+  "publication": "Notes on Data Systems",
+  "publicationUrl": "https://raufmuritala.substack.com/",
+  "items": [
+    {
+      "title": "Designing Data Systems That Actually Support Analytics",
+      "subtitle": "A practical look at how data modeling shapes analytics outcomes.",
+      "url": "https://raufmuritala.substack.com/p/designing-data-systems-that-actually",
+      "date": "2026-02-03"
+    },
+    {
+      "title": "Connecting BI Tools Without Creating Chaos",
+      "subtitle": "Keeping definitions consistent as dashboards grow.",
+      "url": "https://raufmuritala.substack.com/p/connecting-bi-tools-without-creating",
+      "date": "2026-01-27"
+    },
+    {
+      "title": "Modeling the Data (Without Overengineering)",
+      "subtitle": "Facts, dimensions, and why raw data isn't analytics-ready.",
+      "url": "https://raufmuritala.substack.com/p/modeling-the-data-without-overengineering",
+      "date": "2026-01-26"
+    },
+    {
+      "title": "Turning Spreadsheets into a Reliable Data Source",
+      "subtitle": "How to introduce structure before analytics.",
+      "url": "https://raufmuritala.substack.com/p/turning-spreadsheets-into-a-reliable",
+      "date": "2026-01-25"
+    },
+    {
+      "title": "When Spreadsheets Stop Working",
+      "subtitle": "Why spreadsheets work — until they don't.",
+      "url": "https://raufmuritala.substack.com/p/when-spreadsheets-stop-working",
+      "date": "2026-01-24"
+    }
+  ]
+}

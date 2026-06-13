@@ -9,14 +9,14 @@ export default function Contact({ site }: { site: SiteContent }) {
           <div className="grid-texture absolute inset-0" aria-hidden="true" />
           <div className="relative">
             <p className="font-mono text-xs tracking-widest text-gold/90">
-              contact
+              lets_build
             </p>
             <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl font-semibold tracking-tight text-ink md:text-4xl">
-              Let&apos;s build your next data platform.
+              Let&apos;s build something.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-muted">
-              I&apos;m open to full-time, contract, and freelance data engineering
-              work. The fastest way to reach me is email.
+              Interested in data platforms, analytics engineering, or business
+              intelligence initiatives? Let&apos;s connect.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <a

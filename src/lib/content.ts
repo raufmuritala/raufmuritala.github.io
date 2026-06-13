@@ -1,9 +1,11 @@
 import fs from "fs";
 import path from "path";
 import type {
+  BlogPost,
   Certification,
   EducationItem,
   ExperienceItem,
+  ExpertiseGroup,
   Project,
   SiteContent,
 } from "./types";
@@ -116,4 +118,31 @@ export function getCertifications(): Certification[] {
   return readJson<{ items: Certification[] }>(
     path.join(CONTENT_DIR, "certifications.json")
   ).items;
+}
+
+export function getExpertise(): ExpertiseGroup[] {
+  return readJson<{ items: ExpertiseGroup[] }>(
+    path.join(CONTENT_DIR, "expertise.json")
+  ).items;
+}
+
+export interface BlogContent {
+  publication?: string;
+  publicationUrl?: string;
+  posts: BlogPost[];
+}
+
+export function getBlog(): BlogContent {
+  const data = readJson<{
+    publication?: string;
+    publicationUrl?: string;
+    items: BlogPost[];
+  }>(path.join(CONTENT_DIR, "blog.json"));
+  // Newest first, regardless of file order.
+  const posts = [...data.items].sort((a, b) => b.date.localeCompare(a.date));
+  return {
+    publication: data.publication,
+    publicationUrl: data.publicationUrl,
+    posts,
+  };
 }
