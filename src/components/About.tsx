@@ -8,10 +8,13 @@ export default function About({ site }: { site: SiteContent }) {
     <section id="about" className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
       <SectionHeading eyebrow="about_me" title="About" />
 
-      <div className="grid gap-10 md:grid-cols-[0.35fr_0.65fr] md:gap-16">
+      {/* Portrait (left, 30%) supports a single right-hand content block (70%):
+          biography → tech stack → capability pills. Tops are aligned so the
+          image reads as a companion to the writing, not a separate element. */}
+      <div className="grid gap-10 md:grid-cols-[0.3fr_0.7fr] md:items-start md:gap-14">
         <Reveal>
-          {/* Portrait is intentionally secondary: small, desaturated, with a
-              quiet design-system border so the written content leads. */}
+          {/* Intentionally secondary: small, desaturated, quiet design-system
+              border so the written content leads. Rounded-rectangle shape. */}
           <Image
             src={site.profileImage}
             alt={`Portrait of ${site.name}`}
@@ -20,16 +23,6 @@ export default function About({ site }: { site: SiteContent }) {
             className="w-full max-w-[140px] rounded-xl border border-line bg-transparent object-cover [filter:grayscale(0.35)_contrast(0.87)_saturate(0.9)] md:max-w-[240px]"
             priority={false}
           />
-          <div className="mt-6 flex flex-col gap-2">
-            {site.focusAreas.map((area) => (
-              <p
-                key={area}
-                className="rounded-md border border-line-soft bg-panel px-3 py-2 font-mono text-[11px] text-muted"
-              >
-                {area}
-              </p>
-            ))}
-          </div>
         </Reveal>
 
         <div>
@@ -52,6 +45,24 @@ export default function About({ site }: { site: SiteContent }) {
                   className="rounded-md border border-line bg-panel px-3 py-1.5 font-mono text-sm text-ink transition-colors hover:border-gold/50 hover:text-gold"
                 >
                   {t.name}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+
+          {/* Capability areas: supporting metadata, smaller and muted so they
+              sit beneath the biography rather than competing with it. */}
+          <Reveal delay={0.28}>
+            <p className="mb-3 mt-8 font-mono text-[11px] tracking-widest text-faint">
+              capabilities
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {site.focusAreas.map((area) => (
+                <span
+                  key={area}
+                  className="rounded-md border border-line-soft bg-panel/60 px-2.5 py-1 font-mono text-[11px] text-muted"
+                >
+                  {area}
                 </span>
               ))}
             </div>
